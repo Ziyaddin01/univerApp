@@ -20,6 +20,7 @@ public class Teacher {
     private String firstName;
     private String lastName;
     private String subject;
+    private String email;
 
     @ManyToMany
     @JoinTable(name = "teacher_student",
