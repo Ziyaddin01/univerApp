@@ -26,6 +26,9 @@ public class StudentEntity {
     private String email;
     private String phone_number;
     private Integer age;
+    private String username;
+    private String password;
+    private String role;
 
     public StudentEntity(String first_name, String last_name, String email, String phone_number, Integer age) {
         this.first_name = first_name;

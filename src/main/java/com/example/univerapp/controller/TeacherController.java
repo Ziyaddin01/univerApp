@@ -8,6 +8,7 @@ import com.example.univerapp.service.TeacherService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,8 +20,9 @@ public class TeacherController {
     private final TeacherService teacherService;
     private final StudentService studentService;
 
+    @PreAuthorize("hasRole('TEACHER')")
     @GetMapping
-    public List<Teacher> getAllTeachers() {
+    public List<Teacher> getTeachers() {
         return teacherService.getAllTeachers();
     }
     @PostMapping

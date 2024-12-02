@@ -21,6 +21,9 @@ public class Teacher {
     private String lastName;
     private String subject;
     private String email;
+    private String username;
+    private String password;
+    private String role;
 
     @ManyToMany
     @JoinTable(name = "teacher_student",
